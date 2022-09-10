@@ -1,20 +1,56 @@
-:root {
-    --grid-cols: 1;
-    --grid-rows: 1;
-  }
+#content{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(-45deg, #e2592f, #dd1964, #0faee7, #16d861);
+    animation: backgroundGradient 15s ease infinite;
+    background-size: 400% 400%;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+
+#container{
+    display: inline-block;
+    border: 1px;
+    margin-top: 10px;
+   
+}
+.row {
+    display: block;
+    max-width: 100%;
+    font-size: 0;
+}
   
-  #container {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
-  }
+.box {
+    background: #ffffff;
+    border-left: white 1px solid;
+    border-bottom: white 1px solid;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+   
+}
+
+#reset, #rainbow, #custom, #eraser{
   
-  .grid-item {
-    padding: 1em;
-    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+#header{
     text-align: center;
-  }
-  .grid:hover{
-    background-color: blueviolet;
-  }
+    font-size: xxx-large;
+    color: #dd1964;
+    font-weight: bolder;
+
+}
+@media (min-width: 50px) {
+    html{background: linear-gradient(-45deg, #e2592f, #dd1964, #0faee7, #16d861);
+    animation: backgroundGradient 15s ease infinite;
+    background-size: 400% 400%;}
+}
